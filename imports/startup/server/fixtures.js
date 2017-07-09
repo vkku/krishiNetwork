@@ -1,5 +1,3 @@
-// Fill the DB with example data on startup
-
 import { Meteor } from 'meteor/meteor';
 import { Links } from '../../api/links/links.js';
 import { Contacts } from '../../api/contacts/contacts.js';
@@ -37,11 +35,8 @@ Meteor.startup(() => {
  
   if (Contacts.find().count() === 0) {
  contact = JSON.parse(Assets.getText('list/contacts.json'));
-  //var martha = JSON.parse(Assets.getText('companions/martha.json'));
- //companions = [contact];
 
   _.each(contact, function(contact) {
-    // replace this with something like Companions.insert(companion);
     Contacts.insert(contact);
     console.log(contact);
 

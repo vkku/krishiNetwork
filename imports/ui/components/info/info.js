@@ -1,20 +1,20 @@
-import { Links } from '/imports/api/links/links.js';
+//import { Links } from '/imports/api/links/links.js';
 import { Contacts } from '/imports/api/contacts/contacts.js';
+import { Msg } from '/imports/api/msg/msg.js';
 import { Meteor } from 'meteor/meteor';
 import './info.html';
 
+/*
 Template.info.onCreated(function () {
   Meteor.subscribe('links.all');
 });
-
-Template.info.onCreated(function () {
-  Meteor.subscribe('contacts.all');
-});
+*/
 
 Template.info.helpers({
   links() {
     //console.log(Contacts.find({"fname":"Vivek"}));
-    return Contacts.find({"fname":"Vivek"}).fetch();
+    console.log(Msg.find({}).fetch()[0]);
+    return Msg.find({}).fetch();
   },
 });
 /*

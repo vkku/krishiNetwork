@@ -7,6 +7,45 @@
 	  	</a>
   	</ol>
   {{/each}}
+  <input type="text" name="contactjson" placeholder="Paste JSON to add more" class="jsondata">
+  <button class="submitjson">Submit JSON</button>
+  <!-- Trigger the modal with a button -->
+<button type="button" data-toggle="modal" data-target="#myModal">Format for JSON entry</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sample JSON</h4>
+      </div>
+      <div class="modal-body">
+        <p><code>[
+					{ "fname" : "Vivek",
+						"lname": "Kumar",
+						"phone": "+919997063903" },
+
+					{ "fname" : "Kisan",
+						"lname": "Network",
+						"phone": "+919971792703" },
+					{ "fname" : "Test",
+						"lname": "Bot",
+						"phone": "+917599291887" }
+				]
+		</code></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 </template>
 
 

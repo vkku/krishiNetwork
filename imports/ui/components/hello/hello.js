@@ -25,4 +25,18 @@ Template.hello.events({
   'click .fname'(event) {
   	FlowRouter.route('/');
   },
+  'click .submitjson'(event) {
+  	console.log('Inputting : ' + $(".jsondata")[0].value);
+  	contactsData = JSON.parse($(".jsondata")[0].value);
+  	Meteor.call('insertcont', contactsData, (error) => {
+  		if(error)
+  		{
+  			console.log(error);
+  		}
+  		else
+  		{
+  			console.log('success');
+  		}
+  		})
+  }
 });

@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 import { Links } from './links.js';
 import { Contacts } from '/imports/api/contacts/contacts.js';
+import { Msg } from '/imports/api/msg/msg.js';
 
 Meteor.methods({
   'links.insert'(title, url) {
@@ -16,6 +17,16 @@ Meteor.methods({
       createdAt: new Date(),
     });
   },
+
+  'insertMsg'(nam, OTP) {
+  	Msg.insert({name: nam, time: new Date(), otp: OTP});
+  },
+
+  'insertcont'(contactsData) {
+  	_.each(contactsData, function(contactsData) {
+    Contacts.insert(contactsData);
+  });
+},
 
   'sendSMS': (id, msg) => {
   	/*

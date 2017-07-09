@@ -1,12 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Contacts } from '/imports/api/contacts/contacts.js';
-import { Msg } from '/imports/api/contacts/msg.js';
-import './message.html';
 import { Msg } from '/imports/api/msg/msg.js';
-
-
-db.createCollection(contacts,({}));
-
+//import { Msg } from '../../../api/msg/msg.js';
+import './message.html';
 
 
 Template.message.helpers({
@@ -19,17 +15,16 @@ Template.message.helpers({
 	OTP(){
 		min = 10000;
 	    max = 99999;
+	    OTP = Math.floor(Math.random() * (max - min + 1)) + min;
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 })
-
-
-
 
 // send verification code
 Template.message.events({
   'submit .info-sms-add'(event) {
     event.preventDefault();
+    	nam = Contacts.findOne({'_id' : id}).fname;
         phoneNumber = Contacts.findOne({'_id' : id}).phone;
         msg = $(".sendmsg")[0].value;
         console.log('OTP send initiated');
@@ -39,6 +34,15 @@ Template.message.events({
     	}
     	else{
     		console.log('Success');
+    		Meteor.call('insertMsg', nam, OTP, (error) => {
+    			if (error) {
+        			console.log(error);
+    			}
+    			else
+    			{
+    				console.log('Msg Inserted');
+    			}
+    		})
     	}
 
 	});
