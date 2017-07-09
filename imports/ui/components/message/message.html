@@ -1,0 +1,12 @@
+<template name="message">
+	<p>Send Message To :</p>
+	<ul>
+		<li>First Name : {{ credential.fname }}</li>
+		<li>Last Name : {{ credential.lname }}</li>
+		<li>Contact : {{ credential.phone }}</li>
+	</ul>
+	<p><input type="text" name="smstext" class="sendmsg" value="Hi. Your OTP is: {{OTP}}"></p>
+	<form class="info-sms-add">
+		<p><input class="btn btn-info" type="submit" name="submit" value="Send SMS"></p>
+	</form>
+</template>

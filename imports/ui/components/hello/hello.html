@@ -1,0 +1,12 @@
+<template name="hello">
+  <p>Contacts List fetched from JSON :</p>
+  {{#each cont}}
+  	<ol>
+  		<a href="/details/{{_id}}" class="initial">
+	  		<span class="fname">{{fname}}</span> <span class="lname">{{lname}}</span>
+	  	</a>
+  	</ol>
+  {{/each}}
+</template>
+
+

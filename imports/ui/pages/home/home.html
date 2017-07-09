@@ -1,0 +1,23 @@
+<template name="App_home">
+
+  <div class="container-fluid">
+	  <ul class="nav nav-tabs">
+		  <li class="active"><a href="/hello.html">Contacts</a></li>
+		  <li><a href="/info.html">Messages</a></li>
+	  </ul>
+	  <div class="col-md-12">
+	  <p></p>
+	  </div>
+	  <div class="col-md-6">
+	    {{> Template.dynamic template=data}}
+	  </div>
+</div>
+  
+  
+</template>
+
+
+<!--
+  {{> hello}}
+  {{> info}}
+  -->

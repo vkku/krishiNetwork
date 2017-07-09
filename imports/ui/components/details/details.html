@@ -1,0 +1,16 @@
+<template name="details">
+	<p>Contact Details :</p>
+	<ul>
+		<li>First Name : {{ credentials.fname }}</li>
+		<li>Last Name : {{ credentials.lname }}</li>
+		<li>Contact : {{ credentials.phone }}</li>
+	</ul>
+	 <form class="info-sms-add">
+	<p><a href="/message/{{credentials._id}}" class="btn btn-info">Send SMS</a></p>
+	</form>
+</template>
+
+
+<!--
+<p><input class="btn btn-info" type="submit" name="submit" value="Send SMS"></p>
+-->

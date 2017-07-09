@@ -1,0 +1,12 @@
+[
+{ "fname" : "Vivek",
+	"lname": "Kumar",
+	"phone": "+919997063903" },
+
+{ "fname" : "Kisan",
+	"lname": "Network",
+	"phone": "+919997063903" },
+{ "fname" : "Test",
+	"lname": "Bot",
+	"phone": "+917599291887" }
+]
