@@ -60,7 +60,7 @@ client.messages.create({
     from: "+17723205265", 
     body: msg, 
 }, function(err, message) { 
-    console.log(message.sid); 
+    console.log(err); 
 });
 
 
