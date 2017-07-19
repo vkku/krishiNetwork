@@ -55,6 +55,7 @@ var authToken = '529de2050bdfc133e5b1ec1c8239598f';
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
  phone = Contacts.findOne({'_id' : id}).phone;
+ console.log(msg);
 client.messages.create({ 
     to: phone, 
     from: "+17723205265", 
