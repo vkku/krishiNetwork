@@ -13,7 +13,7 @@ Template.info.onCreated(function () {
 Template.info.helpers({
   links() {
     //console.log(Contacts.find({"fname":"Vivek"}));
-    console.log(Msg.find({}).fetch()[0]);
+    //console.log(Msg.find({}).fetch()[0]);
     return Msg.find({}).fetch();
   },
 });

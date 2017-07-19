@@ -16,7 +16,7 @@ Template.message.helpers({
 		min = 10000;
 	    max = 99999;
 	    OTP = Math.floor(Math.random() * (max - min + 1)) + min;
-	    return Math.floor(Math.random() * (max - min + 1)) + min;
+	    return OTP;
 	}
 })
 
