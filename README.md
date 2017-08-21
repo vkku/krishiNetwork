@@ -18,4 +18,4 @@ meteor
 ```
 
 The webapp will be live at : localhost:3000
-* App up and running at : 
+* App up and running at : https://krishifinal.herokuapp.com
